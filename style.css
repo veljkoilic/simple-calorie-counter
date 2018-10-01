@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #F3EFF5;
+
+}
+h1{
+    color: #DD0426;
+}
+h1::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: gray;
+    display: block;
+}
+#counter::after{
+    content: url('http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/heart-icon.png');
+    widows: 50px;
+    height: 50px;
+    position: absolute;
+    right: -130px;
+    bottom: 90px;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+#counter{
+    width: 900px;
+    min-height: 300px;
+    background: #EFF6EE;
+    position    : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px 30px 100px 30px;
+    border-radius: 8px;
+    -webkit-box-shadow: 10px 10px 28px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 28px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 28px -7px rgba(0,0,0,0.75);   
+}
+.point{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-right: 80px;
+}
+ul{
+    list-style-type: none;
+    padding-right: 100px;
+    margin: 0;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    text-transform: capitalize;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 30px;
+    text-align: center;
+}
+input{
+    display: inline-block;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    border-radius: 2px;
+    padding-left: 5px;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid #DD0426;
+
+    
+}
+.shorter{
+    width: 10%;
+}
+span{
+    line-height: 40px;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    
+}
+.calculation{   
+        margin: 20px 80px 20px 50px;
+        font-weight: bold;
+
+}
+#totalTitle{
+        font-size: 20px;
+        
+}
+#totalText{
+        display: flex;
+        justify-content: space-between;
+}
+#totalText > span{
+        position: static;
+}
+
+button{
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        color: #EFF6EE; 
+        margin-top: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 50px;
+        background: #DD0426;
+        border: none;
+        border-radius: 5px;
+}
+
+
+
+
+/* ANIMATIONS */
+
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  

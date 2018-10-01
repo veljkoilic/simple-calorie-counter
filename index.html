@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Veljkos Calorie Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="app">
+    <div id="counter">
+        <h1>Calorie counter!</h1>
+
+        <ul>
+            <li>Food name</li>
+            <li>Calories</li>
+            <li>Carbs</li>
+            <li>Protein</li>
+            <li>Fat</li>
+        </ul>   
+        
+        <div class="point" v-for="food in foods">
+            <input min="0" class="longer" type="text" v-model="food.name">
+            <input min="0" class="shorter" type="number"v-model="food.calories" >
+            <input min="0" class="shorter" type="number"v-model="food.carbs" >
+            <input min="0" class="shorter" type="number"v-model="food.protein">
+            <input min="0" class="shorter" type="number"v-model="food.fat" >
+            <span v-on:click="removeFood(food)">X</span>
+        </div>
+        <div class="calculation"><p id="totalText"><span id="totalTitle">TOTAL:</span> <span>{{totalCalories}} cal </span> <span>{{totalCarbs}}g</span> <span>{{totalProtein}}g</span> <span>{{totalFat}}g</span> </p></div>
+        <div class="point" >
+                <input min="0" class="longer" type="text" v-model="newName" placeholder="Enter Food name">
+                <input min="0" class="shorter" type="number"v-model="newCalories" >
+                <input min="0" class="shorter" type="number"v-model="newCarbs" >
+                <input min="0" class="shorter" type="number"v-model="newProtein">
+                <input min="0" class="shorter" type="number"v-model="newFat" >
+                
+            </div>
+            <button @click="addFood">ADD AND CALCULATE</button>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
